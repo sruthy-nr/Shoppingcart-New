@@ -1,0 +1,11 @@
+
+
+<nav class="navbar bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/view">SHOPPING CART</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="name">
+        <button class="btn btn-outline-success" type="submit" (click)="readValues()">Search</button>
+      </form>
+    </div>
+  </nav>

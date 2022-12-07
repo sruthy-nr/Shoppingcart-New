@@ -10,10 +10,16 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { NavComponent } from './nav/nav.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoute:Routes=[
   {
     path:"",
+    component:AdminComponent
+  },
+  {
+    path:"add",
     component:AddProductComponent
   },
   {
@@ -23,6 +29,10 @@ const myRoute:Routes=[
   {
     path:"search",
     component:SearchProductComponent
+  },
+  {
+    path:"nav",
+    component:NavComponent
   }
 ]
 @NgModule({
@@ -31,7 +41,9 @@ const myRoute:Routes=[
     AddProductComponent,
     ViewProductComponent,
     SearchProductComponent,
-    NavComponent
+    NavComponent,
+    AdminComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
