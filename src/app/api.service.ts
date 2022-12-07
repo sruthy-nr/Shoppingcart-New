@@ -16,4 +16,10 @@ export class ApiService {
   searchProduct=(dataToSend:any)=>{
     return this.http.post("http://localhost:8080/searchproduct",dataToSend)
   }
+  userLogin=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/userlogin",dataToSend)
+  }
+  userRegistration=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/userregistration",dataToSend)
+  }
 }
