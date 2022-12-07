@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>
+                          <!-- <th scope="col">COURSE ID</th> -->
+                          <th scope="col">NAME</th>
+                          <th scope="col">IMAGE</th>
+                          <th scope="col">CATEGORY</th>
+                          <th scope="col">DESCRIPTION</th>
+                          <th scope="col">PRICE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let i of product" >
+                          <!-- <td>{{i._id}}</td> -->
+                          <td>{{i.name}}</td>
+                          <td><img src={{i.image}} alt="" width="200" height="200"></td>
+                          <td>{{i.category}}</td>
+                          <td>{{i.description}}</td>
+                          <td>{{i.price}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
