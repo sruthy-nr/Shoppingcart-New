@@ -1,11 +1,25 @@
 
 
-<nav class="navbar bg-primary">
+<nav class="navbar bg-warning">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/view">SHOPPING CART</a>
+      <a class="navbar-brand" routerLink="/userlog">SHOPPING CART</a>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="name">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="name">
         <button class="btn btn-outline-success" type="submit" (click)="readValues()">Search</button>
       </form>
     </div>
+
   </nav>
+  <div class="row g-3 mt-3">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4" *ngFor="let i of searchdata">
+          <div class="card" style="width: 18rem;">
+            <img src={{i.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{i.name}}</h5>
+              <p class="card-text">{{i.category}}</p>
+              <p class="card-text">{{i.description}}</p>
+              <p class="card-text">{{i.price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>

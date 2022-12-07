@@ -12,6 +12,10 @@ import { NavComponent } from './nav/nav.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserregComponent } from './userreg/userreg.component';
+import { UserlogComponent } from './userlog/userlog.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { UserviewComponent } from './userview/userview.component';
 
 const myRoute:Routes=[
   {
@@ -33,7 +37,24 @@ const myRoute:Routes=[
   {
     path:"nav",
     component:NavComponent
+  },
+  {
+    path:"userreg",
+    component:UserregComponent
+  },
+  {
+    path:"userlog",
+    component:UserlogComponent
+  },
+  {
+    path:"navbar",
+    component:NavbarComponent
+  },
+  {
+    path:"userview",
+    component:UserviewComponent
   }
+
 ]
 @NgModule({
   declarations: [
@@ -43,7 +64,11 @@ const myRoute:Routes=[
     SearchProductComponent,
     NavComponent,
     AdminComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserregComponent,
+    UserlogComponent,
+    MainNavComponent,
+    UserviewComponent
   ],
   imports: [
     BrowserModule,

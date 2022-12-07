@@ -3,45 +3,33 @@ import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-userlog',
+  templateUrl: './userlog.component.html',
+  styleUrls: ['./userlog.component.css']
 })
-export class NavbarComponent {
+export class UserlogComponent {
+  email=""
+  password=""
 
-  
   constructor(private api:ApiService,private route:Router){}
-  name=""
-
-  searchdata:any=[]
   readValues=()=>
-
   {
-
-    let data:any={
-
-      "name":this.name
-    }
-
+    let data:any={"email":this.email,"password":this.password}
     console.log(data)
-
-    this.api.searchProduct(data).subscribe(
+    this.api.userLogin(data).subscribe(
 
       (response:any)=>{
 
         console.log(response)
 
         if (response.length==0) {
-          alert("invalid product name")
+          alert("Invalid credentials")
         }
          else {
-          this.searchdata = response
+          this.route.navigate(['/userview'])
         }
 
       }
-
-    )
-
-  }
-
+      )
+    }
 }
