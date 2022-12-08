@@ -13,6 +13,9 @@ export class NavbarComponent {
   constructor(private api:ApiService,private route:Router){}
   name=""
 
+  navigate=()=>{
+    this.route.navigate(['/navbar'])
+  }
   searchdata:any=[]
   readValues=()=>
 

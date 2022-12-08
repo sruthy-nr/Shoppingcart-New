@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class UserregComponent {
   email=""
   password=""
   cpassword=""
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private route:Router){}
   readValues=()=>{
     let data:any={
       "name":this.name,
@@ -37,7 +38,7 @@ export class UserregComponent {
           this.email=""
           this.password=""
           this.cpassword=""
-
+          this.route.navigate(['/userlog'])
         } 
         else {
           alert("Something went wrong")
