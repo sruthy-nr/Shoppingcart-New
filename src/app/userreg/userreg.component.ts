@@ -26,7 +26,7 @@ export class UserregComponent {
 
     }
     console.log(data)
-    if(this.password==this.cpassword){
+    if(this.password==this.cpassword && this.password != "" && this.email != ""){
     this.api.userRegistration(data).subscribe(
       (response:any)=>{
         console.log(response)
