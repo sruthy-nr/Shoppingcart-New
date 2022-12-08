@@ -17,7 +17,7 @@ export class AddProductComponent {
     let product:any={
       "name":this.name,
       "image":this.image,
-      "catgory":this.category,
+      "category":this.category,
       "description":this.description,
       "price":this.price
     }
