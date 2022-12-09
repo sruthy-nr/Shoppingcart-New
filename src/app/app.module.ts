@@ -16,6 +16,7 @@ import { UserregComponent } from './userreg/userreg.component';
 import { UserlogComponent } from './userlog/userlog.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { UserviewComponent } from './userview/userview.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
 
 const myRoute:Routes=[
   {
@@ -53,6 +54,10 @@ const myRoute:Routes=[
   {
     path:"userview",
     component:UserviewComponent
+  },
+  {
+    path:"profileview",
+    component:ProfileViewComponent
   }
 
 ]
@@ -68,7 +73,8 @@ const myRoute:Routes=[
     UserregComponent,
     UserlogComponent,
     MainNavComponent,
-    UserviewComponent
+    UserviewComponent,
+    ProfileViewComponent
   ],
   imports: [
     BrowserModule,
