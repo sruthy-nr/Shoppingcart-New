@@ -10,6 +10,7 @@ import { ApiService } from '../api.service';
 export class UserlogComponent {
   email=""
   password=""
+  searchUser:any=[]
 
   constructor(private api:ApiService,private route:Router){}
   readValues=()=>
@@ -24,9 +25,15 @@ export class UserlogComponent {
 
         if (response.length==0) {
           alert("Invalid credentials")
+          this.email=""
+          this.password=""
         }
          else {
-          this.route.navigate(['/userview'])
+          this.searchUser=response;
+          let userid=response.userid
+          console.log(userid)
+          localStorage.setItem("userinfo",userid)
+          this.route.navigate(['/profileview'])
         }
 
       }
